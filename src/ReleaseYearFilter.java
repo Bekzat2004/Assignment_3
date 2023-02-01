@@ -5,7 +5,8 @@ public class ReleaseYearFilter implements AutomobileFilter {
     private int fromYear;
     private int toYear;
 
-    public ReleaseYearFilter() {}
+    public ReleaseYearFilter() {
+    }
 
     public ReleaseYearFilter(int from, int to) {
         this.fromYear = from;
@@ -21,7 +22,7 @@ public class ReleaseYearFilter implements AutomobileFilter {
     }
 
 
-
+    @Override
     public List<Automobile> filter(List<Automobile> automobiles) {
         List<Automobile> filteredAutomobiles = new ArrayList<>();
         for (Automobile automobile : automobiles) {
@@ -29,6 +30,6 @@ public class ReleaseYearFilter implements AutomobileFilter {
                 filteredAutomobiles.add(automobile);
             }
         }
-        return new ArrayList<>();
+        return filteredAutomobiles;
     }
 }

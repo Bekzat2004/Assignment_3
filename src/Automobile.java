@@ -1,13 +1,15 @@
 public class Automobile extends Transport {
-    public Automobile(String speed, String color, String region, boolean isFullEquipment, double price, int numberOfSeats, double volumeOfEngine, double weight) {
-        super(speed, color, region, isFullEquipment, price, numberOfSeats, volumeOfEngine, weight);
+    public Automobile(String color, double price, double volumeOfEngine) {
+        super(color, price, volumeOfEngine);
     }
 
+    private String color;
     private boolean isAutomatic;
     private int releaseYear;
     private boolean isNew;
 
     public Automobile(boolean isAutomatic, int releaseYear, boolean isNew) {
+        super();
         this.isAutomatic = isAutomatic;
         this.releaseYear = releaseYear;
         this.isNew = isNew;
@@ -15,6 +17,12 @@ public class Automobile extends Transport {
 
     public boolean isAutomatic() {
         return isAutomatic;
+    }
+
+
+    @Override
+    public String getColor() {
+        return color;
     }
 
     public void setAutomatic(boolean automatic) {

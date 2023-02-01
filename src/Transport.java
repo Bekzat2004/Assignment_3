@@ -1,32 +1,22 @@
 public abstract class Transport {
-    String speed;
     String color;
     String region;
-    boolean isFullEquipment;
     double price;
-    int numberOfSeats;
     double volumeOfEngine;
     double weight;
     boolean isNew;
 
-    public Transport(String speed, String color, String region, boolean isFullEquipment, double price, int numberOfSeats, double volumeOfEngine, double weight) {
-        this.speed = speed;
+    public Transport(String color, double price, double volumeOfEngine) {
         this.color = color;
-        this.region = region;
-        this.isFullEquipment = isFullEquipment;
         this.price = price;
-        this.numberOfSeats = numberOfSeats;
         this.volumeOfEngine = volumeOfEngine;
-        this.weight = weight;
     }
 
-    public String getSpeed() {
-        return speed;
+    public Transport() {
+
     }
 
-    public void setSpeed(String speed) {
-        this.speed = speed;
-    }
+
 
     public String getColor() {
         return color;
@@ -44,13 +34,7 @@ public abstract class Transport {
         this.region = region;
     }
 
-    public boolean isFullEquipment() {
-        return isFullEquipment;
-    }
 
-    public void setFullEquipment(boolean fullEquipment) {
-        isFullEquipment = fullEquipment;
-    }
 
     public double getPrice() {
         return price;
@@ -60,13 +44,7 @@ public abstract class Transport {
         this.price = price;
     }
 
-    public int getNumberOfSeats() {
-        return numberOfSeats;
-    }
 
-    public void setNumberOfSeats(int numberOfSeats) {
-        this.numberOfSeats = numberOfSeats;
-    }
 
     public double getVolumeOfEngine() {
         return volumeOfEngine;
@@ -76,13 +54,7 @@ public abstract class Transport {
         this.volumeOfEngine = volumeOfEngine;
     }
 
-    public double getWeight() {
-        return weight;
-    }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
 
     public boolean isNew() {
         return isNew;

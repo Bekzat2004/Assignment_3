@@ -4,18 +4,18 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-//        List<Automobile> automobiles = List.of(
-//                new Automobile(true, 1998),
-//                new Automobile(true, 2003)
-//        );
-//        Transmission transmission = new Transmission();
-////        ReleaseYear releaseYear = new ReleaseYear();
-//
-//
-//
-//        inputTransmission(input, transmission);
-//        automobiles = transmission.filter(automobiles);
-//        System.out.println(automobiles);
+        List<Automobile> automobiles = List.of(
+                new Automobile(false, 1998, true),
+                new Automobile(true, 2003, false)
+        );
+        TransmissionBoxFilter transmission = new TransmissionBoxFilter();
+        ReleaseYearFilter releaseYear = new ReleaseYearFilter();
+
+
+
+        inputTransmission(input, transmission);
+        automobiles = transmission.filter(automobiles);
+        System.out.println(automobiles);
         menu(input);
     }
 

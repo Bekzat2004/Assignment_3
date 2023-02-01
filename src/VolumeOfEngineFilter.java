@@ -1,18 +1,19 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class TransmissionBoxFilter implements AutomobileFilter {
-    private boolean isAutomatic;
+public class VolumeOfEngineFilter implements AutomobileFilter {
 
-    public void setAutomatic(boolean automatic) {
-        isAutomatic = automatic;
+    private double volumeOfEngine;
+
+    public void setVolumeOfEngine(double volumeOfEngine) {
+        this.volumeOfEngine = volumeOfEngine;
     }
 
     @Override
     public List<Automobile> filter(List<Automobile> automobiles) {
         List<Automobile> filteredAutomobiles = new ArrayList<>();
         for (Automobile automobile : automobiles) {
-            if (automobile.isAutomatic() == isAutomatic) {
+            if (automobile.getVolumeOfEngine() == volumeOfEngine) {
                 filteredAutomobiles.add(automobile);
             }
         }

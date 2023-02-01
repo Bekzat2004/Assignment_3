@@ -1,18 +1,19 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class TransmissionBoxFilter implements AutomobileFilter {
-    private boolean isAutomatic;
+public class ColorFilter implements AutomobileFilter {
 
-    public void setAutomatic(boolean automatic) {
-        isAutomatic = automatic;
+    private String color;
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     @Override
     public List<Automobile> filter(List<Automobile> automobiles) {
         List<Automobile> filteredAutomobiles = new ArrayList<>();
         for (Automobile automobile : automobiles) {
-            if (automobile.isAutomatic() == isAutomatic) {
+            if (automobile.getColor().equals(color)) {
                 filteredAutomobiles.add(automobile);
             }
         }
