@@ -3,7 +3,6 @@ public abstract class Transport {
     String region;
     double price;
     double volumeOfEngine;
-    double weight;
     boolean isNew;
 
     public Transport(String color, double price, double volumeOfEngine) {
